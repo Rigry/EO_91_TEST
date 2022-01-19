@@ -53,8 +53,6 @@ Discarded input sections
  .group         0x0000000000000000        0xc build/main.o
  .group         0x0000000000000000        0xc build/main.o
  .group         0x0000000000000000        0xc build/main.o
- .group         0x0000000000000000        0x8 build/main.o
- .group         0x0000000000000000        0xc build/main.o
  .group         0x0000000000000000        0xc build/main.o
  .group         0x0000000000000000        0xc build/main.o
  .group         0x0000000000000000        0xc build/main.o
@@ -320,7 +318,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
                 0x0000000008000000                g_pfnVectors
                 0x00000000080000c0                . = ALIGN (0x4)
 
-.text           0x00000000080000c0     0x1224
+.text           0x00000000080000c0     0x1234
                 0x00000000080000c0                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080000c0       0x98 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
@@ -371,182 +369,175 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
  .text._ZN3PinaSEb
                 0x000000000800064c       0x16 build/main.o
                 0x000000000800064c                Pin::operator=(bool)
+ *fill*         0x0000000008000662        0x2 
+ .text._ZN3SSIIN3mcu4Pin_ILNS0_6PeriphE3ELi6EEENS1_ILS2_3ELi7EEENS1_ILS2_4ELi0EEENS1_ILS2_4ELi1EEENS1_ILS2_4ELi2EEENS1_ILS2_4ELi10EEENS1_ILS2_4ELi11EEENS1_ILS2_4ELi12EEEJNS1_ILS2_4ELi3EEENS1_ILS2_3ELi15EEENS1_ILS2_4ELi9EEENS1_ILS2_4ELi8EEENS1_ILS2_4ELi7EEENS1_ILS2_4ELi6EEEEE6notifyEv
+                0x0000000008000664      0x12c build/main.o
+                0x0000000008000664                SSI<mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::notify()
  .text._ZN3mcu3TIM11set_compareENS0_7ChannelEm
-                0x0000000008000662       0x20 build/main.o
-                0x0000000008000662                mcu::TIM::set_compare(mcu::TIM::Channel, unsigned long)
- *fill*         0x0000000008000682        0x2 
+                0x0000000008000790       0x20 build/main.o
+                0x0000000008000790                mcu::TIM::set_compare(mcu::TIM::Channel, unsigned long)
  .text.DMA1_Channel1_IRQHandler
-                0x0000000008000684       0x1c build/main.o
-                0x0000000008000684                DMA1_Channel1_IRQHandler
+                0x00000000080007b0       0x1c build/main.o
+                0x00000000080007b0                DMA1_Channel1_IRQHandler
  .text.DMA1_Channel2_3_IRQHandler
-                0x00000000080006a0       0x2c build/main.o
-                0x00000000080006a0                DMA1_Channel2_3_IRQHandler
+                0x00000000080007cc       0x2c build/main.o
+                0x00000000080007cc                DMA1_Channel2_3_IRQHandler
  .text.DMA1_Channel4_5_IRQHandler
-                0x00000000080006cc        0x2 build/main.o
-                0x00000000080006cc                DMA1_Channel4_5_IRQHandler
- *fill*         0x00000000080006ce        0x2 
+                0x00000000080007f8        0x2 build/main.o
+                0x00000000080007f8                DMA1_Channel4_5_IRQHandler
+ *fill*         0x00000000080007fa        0x2 
  .text.TIM1_BRK_UP_TRG_COM_IRQHandler
-                0x00000000080006d0       0x20 build/main.o
-                0x00000000080006d0                TIM1_BRK_UP_TRG_COM_IRQHandler
+                0x00000000080007fc       0x20 build/main.o
+                0x00000000080007fc                TIM1_BRK_UP_TRG_COM_IRQHandler
  .text.TIM1_CC_IRQHandler
-                0x00000000080006f0        0x8 build/main.o
-                0x00000000080006f0                TIM1_CC_IRQHandler
+                0x000000000800081c        0x8 build/main.o
+                0x000000000800081c                TIM1_CC_IRQHandler
  .text.TIM3_IRQHandler
-                0x00000000080006f8       0x20 build/main.o
-                0x00000000080006f8                TIM3_IRQHandler
+                0x0000000008000824       0x20 build/main.o
+                0x0000000008000824                TIM3_IRQHandler
  .text.TIM14_IRQHandler
-                0x0000000008000718        0x2 build/main.o
-                0x0000000008000718                TIM14_IRQHandler
+                0x0000000008000844        0x2 build/main.o
+                0x0000000008000844                TIM14_IRQHandler
  .text.TIM16_IRQHandler
-                0x000000000800071a        0x2 build/main.o
-                0x000000000800071a                TIM16_IRQHandler
+                0x0000000008000846        0x2 build/main.o
+                0x0000000008000846                TIM16_IRQHandler
  .text.TIM17_IRQHandler
-                0x000000000800071c        0x2 build/main.o
-                0x000000000800071c                TIM17_IRQHandler
- *fill*         0x000000000800071e        0x2 
+                0x0000000008000848        0x2 build/main.o
+                0x0000000008000848                TIM17_IRQHandler
+ *fill*         0x000000000800084a        0x2 
  .text.USART1_IRQHandler
-                0x0000000008000720       0x1c build/main.o
-                0x0000000008000720                USART1_IRQHandler
+                0x000000000800084c       0x1c build/main.o
+                0x000000000800084c                USART1_IRQHandler
  .text.EXTI0_1_IRQHandler
-                0x000000000800073c       0x34 build/main.o
-                0x000000000800073c                EXTI0_1_IRQHandler
+                0x0000000008000868       0x34 build/main.o
+                0x0000000008000868                EXTI0_1_IRQHandler
  .text.EXTI2_3_IRQHandler
-                0x0000000008000770       0x34 build/main.o
-                0x0000000008000770                EXTI2_3_IRQHandler
+                0x000000000800089c       0x34 build/main.o
+                0x000000000800089c                EXTI2_3_IRQHandler
  .text.EXTI4_15_IRQHandler
-                0x00000000080007a4       0xf8 build/main.o
-                0x00000000080007a4                EXTI4_15_IRQHandler
+                0x00000000080008d0       0xf8 build/main.o
+                0x00000000080008d0                EXTI4_15_IRQHandler
  .text._ZN3PWM10Duty_cycle6updateEv
-                0x000000000800089c       0x1e build/main.o
-                0x000000000800089c                PWM::Duty_cycle::update()
- *fill*         0x00000000080008ba        0x2 
+                0x00000000080009c8       0x1e build/main.o
+                0x00000000080009c8                PWM::Duty_cycle::update()
+ *fill*         0x00000000080009e6        0x2 
  .text.init_clock
-                0x00000000080008bc       0x58 build/main.o
-                0x00000000080008bc                init_clock
+                0x00000000080009e8       0x58 build/main.o
+                0x00000000080009e8                init_clock
  .text._ZN3PWM4makeILN3mcu6PeriphE17ENS1_4Pin_ILS2_3ELi8EEEEERDat
-                0x0000000008000914       0xf8 build/main.o
-                0x0000000008000914                auto& PWM::make<(mcu::Periph)17, mcu::Pin_<(mcu::Periph)3, 8> >(unsigned short)
- .text._Z9make_pinsILN3mcu7PinModeE1EJNS0_4Pin_ILNS0_6PeriphE4ELi10EEENS2_ILS3_4ELi2EEENS2_ILS3_4ELi0EEENS2_ILS3_3ELi7EEENS2_ILS3_3ELi6EEENS2_ILS3_4ELi12EEENS2_ILS3_4ELi11EEEEEN4meta19tuple_generate_implIR3PinSt16integer_sequenceIjJXspcl14__integer_packsZT0_EEEEE4typeEv
-                0x0000000008000a0c      0x1f4 build/main.o
-                0x0000000008000a0c                meta::tuple_generate_impl<Pin&, std::integer_sequence<unsigned int, __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7)> >::type make_pins<(mcu::PinMode)1, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 11> >()
- .text._ZNSt11_Tuple_implILj0EJ3PinS0_S0_S0_S0_S0_S0_EEC2IRS0_JS3_S3_S3_S3_S3_S3_EEEOS_ILj0EJT_DpT0_EE
-                0x0000000008000c00       0x30 build/main.o
-                0x0000000008000c00                std::_Tuple_impl<0u, Pin, Pin, Pin, Pin, Pin, Pin, Pin>::_Tuple_impl<Pin&, Pin&, Pin&, Pin&, Pin&, Pin&, Pin&>(std::_Tuple_impl<0u, Pin&, Pin&, Pin&, Pin&, Pin&, Pin&, Pin&>&&)
-                0x0000000008000c00                std::_Tuple_impl<0u, Pin, Pin, Pin, Pin, Pin, Pin, Pin>::_Tuple_impl<Pin&, Pin&, Pin&, Pin&, Pin&, Pin&, Pin&>(std::_Tuple_impl<0u, Pin&, Pin&, Pin&, Pin&, Pin&, Pin&, Pin&>&&)
+                0x0000000008000a40       0xf8 build/main.o
+                0x0000000008000a40                auto& PWM::make<(mcu::Periph)17, mcu::Pin_<(mcu::Periph)3, 8> >(unsigned short)
+ .text._Z9make_pinsILN3mcu7PinModeE1EJNS0_4Pin_ILNS0_6PeriphE3ELi6EEENS2_ILS3_3ELi7EEENS2_ILS3_4ELi0EEENS2_ILS3_4ELi1EEENS2_ILS3_4ELi2EEENS2_ILS3_4ELi10EEENS2_ILS3_4ELi11EEEEEN4meta19tuple_generate_implIR3PinSt16integer_sequenceIjJXspcl14__integer_packsZT0_EEEEE4typeEv
+                0x0000000008000b38      0x1f4 build/main.o
+                0x0000000008000b38                meta::tuple_generate_impl<Pin&, std::integer_sequence<unsigned int, __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7)> >::type make_pins<(mcu::PinMode)1, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 11> >()
  .text._Z9make_pinsILN3mcu7PinModeE1EJNS0_4Pin_ILNS0_6PeriphE4ELi3EEENS2_ILS3_3ELi15EEENS2_ILS3_4ELi9EEENS2_ILS3_4ELi8EEENS2_ILS3_4ELi7EEENS2_ILS3_4ELi6EEEEEN4meta19tuple_generate_implIR3PinSt16integer_sequenceIjJXspcl14__integer_packsZT0_EEEEE4typeEv
-                0x0000000008000c30      0x1a8 build/main.o
-                0x0000000008000c30                meta::tuple_generate_impl<Pin&, std::integer_sequence<unsigned int, __integer_pack(6), __integer_pack(6), __integer_pack(6), __integer_pack(6), __integer_pack(6), __integer_pack(6)> >::type make_pins<(mcu::PinMode)1, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >()
- .text._ZN3SSIIN3mcu4Pin_ILNS0_6PeriphE4ELi10EEENS1_ILS2_4ELi2EEENS1_ILS2_4ELi0EEENS1_ILS2_3ELi7EEENS1_ILS2_3ELi6EEENS1_ILS2_4ELi12EEENS1_ILS2_4ELi11EEENS1_ILS2_4ELi1EEEJNS1_ILS2_4ELi3EEENS1_ILS2_3ELi15EEENS1_ILS2_4ELi9EEENS1_ILS2_4ELi8EEENS1_ILS2_4ELi7EEENS1_ILS2_4ELi6EEEEE12dinamic_testEv
-                0x0000000008000dd8       0x4e build/main.o
-                0x0000000008000dd8                SSI<mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::dinamic_test()
- *fill*         0x0000000008000e26        0x2 
- .text._ZN3SSIIN3mcu4Pin_ILNS0_6PeriphE4ELi10EEENS1_ILS2_4ELi2EEENS1_ILS2_4ELi0EEENS1_ILS2_3ELi7EEENS1_ILS2_3ELi6EEENS1_ILS2_4ELi12EEENS1_ILS2_4ELi11EEENS1_ILS2_4ELi1EEEJNS1_ILS2_4ELi3EEENS1_ILS2_3ELi15EEENS1_ILS2_4ELi9EEENS1_ILS2_4ELi8EEENS1_ILS2_4ELi7EEENS1_ILS2_4ELi6EEEEEC2Eh
-                0x0000000008000e28       0xec build/main.o
-                0x0000000008000e28                SSI<mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::SSI(unsigned char)
-                0x0000000008000e28                SSI<mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::SSI(unsigned char)
+                0x0000000008000d2c      0x1a8 build/main.o
+                0x0000000008000d2c                meta::tuple_generate_impl<Pin&, std::integer_sequence<unsigned int, __integer_pack(6), __integer_pack(6), __integer_pack(6), __integer_pack(6), __integer_pack(6), __integer_pack(6)> >::type make_pins<(mcu::PinMode)1, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >()
+ .text._ZN3SSIIN3mcu4Pin_ILNS0_6PeriphE3ELi6EEENS1_ILS2_3ELi7EEENS1_ILS2_4ELi0EEENS1_ILS2_4ELi1EEENS1_ILS2_4ELi2EEENS1_ILS2_4ELi10EEENS1_ILS2_4ELi11EEENS1_ILS2_4ELi12EEEJNS1_ILS2_4ELi3EEENS1_ILS2_3ELi15EEENS1_ILS2_4ELi9EEENS1_ILS2_4ELi8EEENS1_ILS2_4ELi7EEENS1_ILS2_4ELi6EEEEE12dinamic_testEv
+                0x0000000008000ed4       0x4e build/main.o
+                0x0000000008000ed4                SSI<mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::dinamic_test()
+ *fill*         0x0000000008000f22        0x2 
+ .text._ZN3SSIIN3mcu4Pin_ILNS0_6PeriphE3ELi6EEENS1_ILS2_3ELi7EEENS1_ILS2_4ELi0EEENS1_ILS2_4ELi1EEENS1_ILS2_4ELi2EEENS1_ILS2_4ELi10EEENS1_ILS2_4ELi11EEENS1_ILS2_4ELi12EEEJNS1_ILS2_4ELi3EEENS1_ILS2_3ELi15EEENS1_ILS2_4ELi9EEENS1_ILS2_4ELi8EEENS1_ILS2_4ELi7EEENS1_ILS2_4ELi6EEEEEC2Eh
+                0x0000000008000f24      0x118 build/main.o
+                0x0000000008000f24                SSI<mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::SSI(unsigned char)
+                0x0000000008000f24                SSI<mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::SSI(unsigned char)
  .text.startup.main
-                0x0000000008000f14       0xbc build/main.o
-                0x0000000008000f14                main
- .text._ZNSt11_Tuple_implILj0EJ3PinS0_S0_S0_S0_S0_S0_EE9_M_assignIJiiiiiiiEEEvRKS_ILj0EJDpT_EE
-                0x0000000008000fd0       0x74 build/main.o
-                0x0000000008000fd0                void std::_Tuple_impl<0u, Pin, Pin, Pin, Pin, Pin, Pin, Pin>::_M_assign<int, int, int, int, int, int, int>(std::_Tuple_impl<0u, int, int, int, int, int, int, int> const&)
- .text._ZN3SSIIN3mcu4Pin_ILNS0_6PeriphE4ELi10EEENS1_ILS2_4ELi2EEENS1_ILS2_4ELi0EEENS1_ILS2_3ELi7EEENS1_ILS2_3ELi6EEENS1_ILS2_4ELi12EEENS1_ILS2_4ELi11EEENS1_ILS2_4ELi1EEEJNS1_ILS2_4ELi3EEENS1_ILS2_3ELi15EEENS1_ILS2_4ELi9EEENS1_ILS2_4ELi8EEENS1_ILS2_4ELi7EEENS1_ILS2_4ELi6EEEEE6notifyEv
-                0x0000000008001044       0xc0 build/main.o
-                0x0000000008001044                SSI<mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::notify()
+                0x000000000800103c       0xd8 build/main.o
+                0x000000000800103c                main
  .text.startup._GLOBAL__sub_I__ZN3mcu5FLASH6unlockEv
-                0x0000000008001104      0x174 build/main.o
+                0x0000000008001114      0x174 build/main.o
  .text.Reset_Handler
-                0x0000000008001278       0x50 build/startup_stm32f030x6.o
-                0x0000000008001278                Reset_Handler
+                0x0000000008001288       0x50 build/startup_stm32f030x6.o
+                0x0000000008001288                Reset_Handler
  .text.Default_Handler
-                0x00000000080012c8        0x2 build/startup_stm32f030x6.o
-                0x00000000080012c8                HardFault_Handler
-                0x00000000080012c8                PendSV_Handler
-                0x00000000080012c8                NMI_Handler
-                0x00000000080012c8                I2C1_IRQHandler
-                0x00000000080012c8                SPI1_IRQHandler
-                0x00000000080012c8                ADC1_IRQHandler
-                0x00000000080012c8                RTC_IRQHandler
-                0x00000000080012c8                RCC_IRQHandler
-                0x00000000080012c8                Default_Handler
-                0x00000000080012c8                SVC_Handler
-                0x00000000080012c8                WWDG_IRQHandler
-                0x00000000080012c8                FLASH_IRQHandler
+                0x00000000080012d8        0x2 build/startup_stm32f030x6.o
+                0x00000000080012d8                HardFault_Handler
+                0x00000000080012d8                PendSV_Handler
+                0x00000000080012d8                NMI_Handler
+                0x00000000080012d8                I2C1_IRQHandler
+                0x00000000080012d8                SPI1_IRQHandler
+                0x00000000080012d8                ADC1_IRQHandler
+                0x00000000080012d8                RTC_IRQHandler
+                0x00000000080012d8                RCC_IRQHandler
+                0x00000000080012d8                Default_Handler
+                0x00000000080012d8                SVC_Handler
+                0x00000000080012d8                WWDG_IRQHandler
+                0x00000000080012d8                FLASH_IRQHandler
  *(.glue_7)
- .glue_7        0x00000000080012ca        0x0 linker stubs
+ .glue_7        0x00000000080012da        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x00000000080012ca        0x0 linker stubs
+ .glue_7t       0x00000000080012da        0x0 linker stubs
  *(.eh_frame)
- *fill*         0x00000000080012ca        0x2 
- .eh_frame      0x00000000080012cc        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+ *fill*         0x00000000080012da        0x2 
+ .eh_frame      0x00000000080012dc        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
  *(.init)
- .init          0x00000000080012cc        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
-                0x00000000080012cc                _init
- .init          0x00000000080012d0        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
+ .init          0x00000000080012dc        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
+                0x00000000080012dc                _init
+ .init          0x00000000080012e0        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x00000000080012d8        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
-                0x00000000080012d8                _fini
- .fini          0x00000000080012dc        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
-                0x00000000080012e4                . = ALIGN (0x4)
-                0x00000000080012e4                _etext = .
+ .fini          0x00000000080012e8        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
+                0x00000000080012e8                _fini
+ .fini          0x00000000080012ec        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
+                0x00000000080012f4                . = ALIGN (0x4)
+                0x00000000080012f4                _etext = .
 
-.vfp11_veneer   0x00000000080012e4        0x0
- .vfp11_veneer  0x00000000080012e4        0x0 linker stubs
+.vfp11_veneer   0x00000000080012f4        0x0
+ .vfp11_veneer  0x00000000080012f4        0x0 linker stubs
 
-.v4_bx          0x00000000080012e4        0x0
- .v4_bx         0x00000000080012e4        0x0 linker stubs
+.v4_bx          0x00000000080012f4        0x0
+ .v4_bx         0x00000000080012f4        0x0 linker stubs
 
-.iplt           0x00000000080012e4        0x0
- .iplt          0x00000000080012e4        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x00000000080012f4        0x0
+ .iplt          0x00000000080012f4        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x00000000080012e4       0x24
-                0x00000000080012e4                . = ALIGN (0x4)
+.rodata         0x00000000080012f4       0x24
+                0x00000000080012f4                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata._ZTV5Timer
-                0x00000000080012e4        0xc build/main.o
-                0x00000000080012e4                vtable for Timer
+                0x00000000080012f4        0xc build/main.o
+                0x00000000080012f4                vtable for Timer
  .rodata._ZTV6Buzzer
-                0x00000000080012f0        0xc build/main.o
-                0x00000000080012f0                vtable for Buzzer
- .rodata._ZTV3SSIIN3mcu4Pin_ILNS0_6PeriphE4ELi10EEENS1_ILS2_4ELi2EEENS1_ILS2_4ELi0EEENS1_ILS2_3ELi7EEENS1_ILS2_3ELi6EEENS1_ILS2_4ELi12EEENS1_ILS2_4ELi11EEENS1_ILS2_4ELi1EEEJNS1_ILS2_4ELi3EEENS1_ILS2_3ELi15EEENS1_ILS2_4ELi9EEENS1_ILS2_4ELi8EEENS1_ILS2_4ELi7EEENS1_ILS2_4ELi6EEEEE
-                0x00000000080012fc        0xc build/main.o
-                0x00000000080012fc                vtable for SSI<mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >
-                0x0000000008001308                . = ALIGN (0x4)
+                0x0000000008001300        0xc build/main.o
+                0x0000000008001300                vtable for Buzzer
+ .rodata._ZTV3SSIIN3mcu4Pin_ILNS0_6PeriphE3ELi6EEENS1_ILS2_3ELi7EEENS1_ILS2_4ELi0EEENS1_ILS2_4ELi1EEENS1_ILS2_4ELi2EEENS1_ILS2_4ELi10EEENS1_ILS2_4ELi11EEENS1_ILS2_4ELi12EEEJNS1_ILS2_4ELi3EEENS1_ILS2_3ELi15EEENS1_ILS2_4ELi9EEENS1_ILS2_4ELi8EEENS1_ILS2_4ELi7EEENS1_ILS2_4ELi6EEEEE
+                0x000000000800130c        0xc build/main.o
+                0x000000000800130c                vtable for SSI<mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >
+                0x0000000008001318                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008001308        0x0
- .rel.iplt      0x0000000008001308        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008001318        0x0
+ .rel.iplt      0x0000000008001318        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008001308        0x0
-                0x0000000008001308                __exidx_start = .
+.ARM            0x0000000008001318        0x0
+                0x0000000008001318                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008001308                __exidx_end = .
+                0x0000000008001318                __exidx_end = .
 
-.preinit_array  0x0000000008001308        0x0
-                0x0000000008001308                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008001318        0x0
+                0x0000000008001318                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008001308                PROVIDE (__preinit_array_end = .)
+                0x0000000008001318                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000008001308        0x8
-                0x0000000008001308                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008001318        0x8
+                0x0000000008001318                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008001308        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
- .init_array    0x000000000800130c        0x4 build/main.o
-                0x0000000008001310                PROVIDE (__init_array_end = .)
+ .init_array    0x0000000008001318        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+ .init_array    0x000000000800131c        0x4 build/main.o
+                0x0000000008001320                PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000008001310        0x4
-                0x0000000008001310                PROVIDE (__fini_array_start = .)
+.fini_array     0x0000000008001320        0x4
+                0x0000000008001320                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008001310        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000008001314                PROVIDE (__fini_array_end = .)
-                0x0000000008001314                _sidata = LOADADDR (.data)
+ .fini_array    0x0000000008001320        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000008001324                PROVIDE (__fini_array_end = .)
+                0x0000000008001324                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x3a0 load address 0x0000000008001314
+.data           0x0000000020000000      0x3a0 load address 0x0000000008001324
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -559,17 +550,17 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
                 0x00000000200003a0                _edata = .
 
 .tm_clone_table
-                0x00000000200003a0        0x0 load address 0x00000000080016b4
+                0x00000000200003a0        0x0 load address 0x00000000080016c4
  .tm_clone_table
                 0x00000000200003a0        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x00000000200003a0        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x00000000200003a0        0x0 load address 0x00000000080016b4
+.igot.plt       0x00000000200003a0        0x0 load address 0x00000000080016c4
  .igot.plt      0x00000000200003a0        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
                 0x00000000200003a0                . = ALIGN (0x4)
 
-.bss            0x00000000200003a0      0x2e4 load address 0x00000000080016b4
+.bss            0x00000000200003a0      0x2e4 load address 0x00000000080016c4
                 0x00000000200003a0                _sbss = .
                 0x00000000200003a0                __bss_start__ = _sbss
  *(.bss)
@@ -617,48 +608,48 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
  .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi11EEELNS1_7PinModeE1EEERDavE3pin
                 0x0000000020000408        0x8 build/main.o
                 0x0000000020000408                Pin::make<mcu::Pin_<(mcu::Periph)4, 11>, (mcu::PinMode)1>()::pin
- .bss._ZGVZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi12EEELNS1_7PinModeE1EEERDavE3pin
+ .bss._ZGVZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi10EEELNS1_7PinModeE1EEERDavE3pin
                 0x0000000020000410        0x4 build/main.o
-                0x0000000020000410                guard variable for Pin::make<mcu::Pin_<(mcu::Periph)4, 12>, (mcu::PinMode)1>()::pin
- .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi12EEELNS1_7PinModeE1EEERDavE3pin
+                0x0000000020000410                guard variable for Pin::make<mcu::Pin_<(mcu::Periph)4, 10>, (mcu::PinMode)1>()::pin
+ .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi10EEELNS1_7PinModeE1EEERDavE3pin
                 0x0000000020000414        0x8 build/main.o
-                0x0000000020000414                Pin::make<mcu::Pin_<(mcu::Periph)4, 12>, (mcu::PinMode)1>()::pin
- .bss._ZGVZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE3ELi6EEELNS1_7PinModeE1EEERDavE3pin
+                0x0000000020000414                Pin::make<mcu::Pin_<(mcu::Periph)4, 10>, (mcu::PinMode)1>()::pin
+ .bss._ZGVZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi2EEELNS1_7PinModeE1EEERDavE3pin
                 0x000000002000041c        0x4 build/main.o
-                0x000000002000041c                guard variable for Pin::make<mcu::Pin_<(mcu::Periph)3, 6>, (mcu::PinMode)1>()::pin
- .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE3ELi6EEELNS1_7PinModeE1EEERDavE3pin
+                0x000000002000041c                guard variable for Pin::make<mcu::Pin_<(mcu::Periph)4, 2>, (mcu::PinMode)1>()::pin
+ .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi2EEELNS1_7PinModeE1EEERDavE3pin
                 0x0000000020000420        0x8 build/main.o
-                0x0000000020000420                Pin::make<mcu::Pin_<(mcu::Periph)3, 6>, (mcu::PinMode)1>()::pin
- .bss._ZGVZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE3ELi7EEELNS1_7PinModeE1EEERDavE3pin
+                0x0000000020000420                Pin::make<mcu::Pin_<(mcu::Periph)4, 2>, (mcu::PinMode)1>()::pin
+ .bss._ZGVZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi1EEELNS1_7PinModeE1EEERDavE3pin
                 0x0000000020000428        0x4 build/main.o
-                0x0000000020000428                guard variable for Pin::make<mcu::Pin_<(mcu::Periph)3, 7>, (mcu::PinMode)1>()::pin
- .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE3ELi7EEELNS1_7PinModeE1EEERDavE3pin
+                0x0000000020000428                guard variable for Pin::make<mcu::Pin_<(mcu::Periph)4, 1>, (mcu::PinMode)1>()::pin
+ .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi1EEELNS1_7PinModeE1EEERDavE3pin
                 0x000000002000042c        0x8 build/main.o
-                0x000000002000042c                Pin::make<mcu::Pin_<(mcu::Periph)3, 7>, (mcu::PinMode)1>()::pin
+                0x000000002000042c                Pin::make<mcu::Pin_<(mcu::Periph)4, 1>, (mcu::PinMode)1>()::pin
  .bss._ZGVZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi0EEELNS1_7PinModeE1EEERDavE3pin
                 0x0000000020000434        0x4 build/main.o
                 0x0000000020000434                guard variable for Pin::make<mcu::Pin_<(mcu::Periph)4, 0>, (mcu::PinMode)1>()::pin
  .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi0EEELNS1_7PinModeE1EEERDavE3pin
                 0x0000000020000438        0x8 build/main.o
                 0x0000000020000438                Pin::make<mcu::Pin_<(mcu::Periph)4, 0>, (mcu::PinMode)1>()::pin
- .bss._ZGVZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi2EEELNS1_7PinModeE1EEERDavE3pin
+ .bss._ZGVZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE3ELi7EEELNS1_7PinModeE1EEERDavE3pin
                 0x0000000020000440        0x4 build/main.o
-                0x0000000020000440                guard variable for Pin::make<mcu::Pin_<(mcu::Periph)4, 2>, (mcu::PinMode)1>()::pin
- .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi2EEELNS1_7PinModeE1EEERDavE3pin
+                0x0000000020000440                guard variable for Pin::make<mcu::Pin_<(mcu::Periph)3, 7>, (mcu::PinMode)1>()::pin
+ .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE3ELi7EEELNS1_7PinModeE1EEERDavE3pin
                 0x0000000020000444        0x8 build/main.o
-                0x0000000020000444                Pin::make<mcu::Pin_<(mcu::Periph)4, 2>, (mcu::PinMode)1>()::pin
- .bss._ZGVZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi10EEELNS1_7PinModeE1EEERDavE3pin
+                0x0000000020000444                Pin::make<mcu::Pin_<(mcu::Periph)3, 7>, (mcu::PinMode)1>()::pin
+ .bss._ZGVZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE3ELi6EEELNS1_7PinModeE1EEERDavE3pin
                 0x000000002000044c        0x4 build/main.o
-                0x000000002000044c                guard variable for Pin::make<mcu::Pin_<(mcu::Periph)4, 10>, (mcu::PinMode)1>()::pin
- .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi10EEELNS1_7PinModeE1EEERDavE3pin
+                0x000000002000044c                guard variable for Pin::make<mcu::Pin_<(mcu::Periph)3, 6>, (mcu::PinMode)1>()::pin
+ .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE3ELi6EEELNS1_7PinModeE1EEERDavE3pin
                 0x0000000020000450        0x8 build/main.o
-                0x0000000020000450                Pin::make<mcu::Pin_<(mcu::Periph)4, 10>, (mcu::PinMode)1>()::pin
- .bss._ZGVZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi1EEELNS1_7PinModeE1EEERDavE3pin
+                0x0000000020000450                Pin::make<mcu::Pin_<(mcu::Periph)3, 6>, (mcu::PinMode)1>()::pin
+ .bss._ZGVZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi12EEELNS1_7PinModeE1EEERDavE3pin
                 0x0000000020000458        0x4 build/main.o
-                0x0000000020000458                guard variable for Pin::make<mcu::Pin_<(mcu::Periph)4, 1>, (mcu::PinMode)1>()::pin
- .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi1EEELNS1_7PinModeE1EEERDavE3pin
+                0x0000000020000458                guard variable for Pin::make<mcu::Pin_<(mcu::Periph)4, 12>, (mcu::PinMode)1>()::pin
+ .bss._ZZN3Pin4makeIN3mcu4Pin_ILNS1_6PeriphE4ELi12EEELNS1_7PinModeE1EEERDavE3pin
                 0x000000002000045c        0x8 build/main.o
-                0x000000002000045c                Pin::make<mcu::Pin_<(mcu::Periph)4, 1>, (mcu::PinMode)1>()::pin
+                0x000000002000045c                Pin::make<mcu::Pin_<(mcu::Periph)4, 12>, (mcu::PinMode)1>()::pin
  .bss._ZGVZN3PWM4makeILN3mcu6PeriphE17ENS1_4Pin_ILS2_3ELi8EEEEERDatE3pwm
                 0x0000000020000464        0x4 build/main.o
                 0x0000000020000464                guard variable for PWM::make<(mcu::Periph)17, mcu::Pin_<(mcu::Periph)3, 8> >(unsigned short)::pwm
@@ -760,7 +751,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
                 0x0000000020000684                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000684      0x604 load address 0x00000000080016b4
+                0x0000000020000684      0x604 load address 0x00000000080016c4
                 0x0000000020000688                . = ALIGN (0x8)
  *fill*         0x0000000020000684        0x4 
                 [!provide]                        PROVIDE (end = .)
@@ -816,78 +807,78 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a
  .comment       0x00000000000000a7       0x4f /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
  .comment       0x00000000000000a7       0x5a /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtend.o
 
-.debug_info     0x0000000000000000    0x2c437
- .debug_info    0x0000000000000000    0x2b368 build/main.o
- .debug_info    0x000000000002b368       0x22 build/startup_stm32f030x6.o
- .debug_info    0x000000000002b38a      0x11a /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
- .debug_info    0x000000000002b4a4      0xf21 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
- .debug_info    0x000000000002c3c5       0x26 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
- .debug_info    0x000000000002c3eb       0x26 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
- .debug_info    0x000000000002c411       0x26 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+.debug_info     0x0000000000000000    0x2c1c5
+ .debug_info    0x0000000000000000    0x2b0f6 build/main.o
+ .debug_info    0x000000000002b0f6       0x22 build/startup_stm32f030x6.o
+ .debug_info    0x000000000002b118      0x11a /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
+ .debug_info    0x000000000002b232      0xf21 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
+ .debug_info    0x000000000002c153       0x26 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_info    0x000000000002c179       0x26 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
+ .debug_info    0x000000000002c19f       0x26 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
 
-.debug_abbrev   0x0000000000000000     0x1803
- .debug_abbrev  0x0000000000000000     0x1510 build/main.o
- .debug_abbrev  0x0000000000001510       0x12 build/startup_stm32f030x6.o
- .debug_abbrev  0x0000000000001522       0xcc /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
- .debug_abbrev  0x00000000000015ee      0x1d9 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
- .debug_abbrev  0x00000000000017c7       0x14 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
- .debug_abbrev  0x00000000000017db       0x14 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
- .debug_abbrev  0x00000000000017ef       0x14 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+.debug_abbrev   0x0000000000000000     0x17ee
+ .debug_abbrev  0x0000000000000000     0x14fb build/main.o
+ .debug_abbrev  0x00000000000014fb       0x12 build/startup_stm32f030x6.o
+ .debug_abbrev  0x000000000000150d       0xcc /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
+ .debug_abbrev  0x00000000000015d9      0x1d9 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
+ .debug_abbrev  0x00000000000017b2       0x14 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_abbrev  0x00000000000017c6       0x14 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
+ .debug_abbrev  0x00000000000017da       0x14 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
 
-.debug_loc      0x0000000000000000     0x5a67
- .debug_loc     0x0000000000000000     0x56f0 build/main.o
- .debug_loc     0x00000000000056f0       0x98 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
- .debug_loc     0x0000000000005788      0x2df /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
+.debug_loc      0x0000000000000000     0x5b4d
+ .debug_loc     0x0000000000000000     0x57d6 build/main.o
+ .debug_loc     0x00000000000057d6       0x98 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
+ .debug_loc     0x000000000000586e      0x2df /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
 
-.debug_aranges  0x0000000000000000      0x2b0
+.debug_aranges  0x0000000000000000      0x2a0
  .debug_aranges
-                0x0000000000000000      0x1e8 build/main.o
+                0x0000000000000000      0x1d8 build/main.o
  .debug_aranges
-                0x00000000000001e8       0x28 build/startup_stm32f030x6.o
+                0x00000000000001d8       0x28 build/startup_stm32f030x6.o
  .debug_aranges
-                0x0000000000000210       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
+                0x0000000000000200       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
  .debug_aranges
-                0x0000000000000230       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
+                0x0000000000000220       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
  .debug_aranges
-                0x0000000000000250       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+                0x0000000000000240       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
  .debug_aranges
-                0x0000000000000270       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
+                0x0000000000000260       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
  .debug_aranges
-                0x0000000000000290       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x0000000000000280       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
 
-.debug_ranges   0x0000000000000000     0x1a80
- .debug_ranges  0x0000000000000000     0x1a60 build/main.o
- .debug_ranges  0x0000000000001a60       0x20 build/startup_stm32f030x6.o
+.debug_ranges   0x0000000000000000     0x17b8
+ .debug_ranges  0x0000000000000000     0x1798 build/main.o
+ .debug_ranges  0x0000000000001798       0x20 build/startup_stm32f030x6.o
 
-.debug_line     0x0000000000000000     0x35d9
- .debug_line    0x0000000000000000     0x308c build/main.o
- .debug_line    0x000000000000308c       0x91 build/startup_stm32f030x6.o
- .debug_line    0x000000000000311d       0xfc /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
- .debug_line    0x0000000000003219      0x281 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
- .debug_line    0x000000000000349a       0x6c /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
- .debug_line    0x0000000000003506       0x73 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
- .debug_line    0x0000000000003579       0x60 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+.debug_line     0x0000000000000000     0x351c
+ .debug_line    0x0000000000000000     0x2fcf build/main.o
+ .debug_line    0x0000000000002fcf       0x91 build/startup_stm32f030x6.o
+ .debug_line    0x0000000000003060       0xfc /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
+ .debug_line    0x000000000000315c      0x281 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
+ .debug_line    0x00000000000033dd       0x6c /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_line    0x0000000000003449       0x73 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
+ .debug_line    0x00000000000034bc       0x60 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
 
-.debug_str      0x0000000000000000    0x27b82
- .debug_str     0x0000000000000000    0x276a6 build/main.o
-                                      0x27e1d (size before relaxing)
- .debug_str     0x00000000000276a6       0x3b build/startup_stm32f030x6.o
+.debug_str      0x0000000000000000    0x2766c
+ .debug_str     0x0000000000000000    0x27190 build/main.o
+                                      0x27907 (size before relaxing)
+ .debug_str     0x0000000000027190       0x3b build/startup_stm32f030x6.o
                                          0x56 (size before relaxing)
- .debug_str     0x00000000000276e1      0x180 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
+ .debug_str     0x00000000000271cb      0x180 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
                                         0x222 (size before relaxing)
- .debug_str     0x0000000000027861      0x28a /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
+ .debug_str     0x000000000002734b      0x28a /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
                                         0x908 (size before relaxing)
- .debug_str     0x0000000000027aeb       0x97 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_str     0x00000000000275d5       0x97 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
                                          0xa3 (size before relaxing)
- .debug_str     0x0000000000027b82       0xa3 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
- .debug_str     0x0000000000027b82       0xa3 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_str     0x000000000002766c       0xa3 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
+ .debug_str     0x000000000002766c       0xa3 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
 
-.debug_frame    0x0000000000000000      0x5b8
- .debug_frame   0x0000000000000000      0x51c build/main.o
- .debug_frame   0x000000000000051c       0x2c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
- .debug_frame   0x0000000000000548       0x30 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
- .debug_frame   0x0000000000000578       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
- .debug_frame   0x0000000000000598       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
+.debug_frame    0x0000000000000000      0x580
+ .debug_frame   0x0000000000000000      0x4e4 build/main.o
+ .debug_frame   0x00000000000004e4       0x2c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000000000000510       0x30 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000540       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_frame   0x0000000000000560       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
 
 Cross Reference Table
 
@@ -931,10 +922,10 @@ RCC_IRQHandler                                    build/startup_stm32f030x6.o
 RTC_IRQHandler                                    build/startup_stm32f030x6.o
 Reset_Handler                                     build/startup_stm32f030x6.o
 SPI1_IRQHandler                                   build/startup_stm32f030x6.o
-SSI<mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::SSI(unsigned char) build/main.o
-SSI<mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::SSI(unsigned char) build/main.o
-SSI<mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::dinamic_test() build/main.o
-SSI<mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::notify() build/main.o
+SSI<mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::SSI(unsigned char) build/main.o
+SSI<mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::SSI(unsigned char) build/main.o
+SSI<mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::dinamic_test() build/main.o
+SSI<mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >::notify() build/main.o
 SVC_Handler                                       build/startup_stm32f030x6.o
 SysTick_Handler                                   build/main.o
 TIM14_IRQHandler                                  build/main.o
@@ -1098,13 +1089,10 @@ memset                                            /usr/lib/gcc/arm-none-eabi/9.2
                                                   build/main.o
                                                   /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
 meta::tuple_generate_impl<Pin&, std::integer_sequence<unsigned int, __integer_pack(6), __integer_pack(6), __integer_pack(6), __integer_pack(6), __integer_pack(6), __integer_pack(6)> >::type make_pins<(mcu::PinMode)1, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> >() build/main.o
-meta::tuple_generate_impl<Pin&, std::integer_sequence<unsigned int, __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7)> >::type make_pins<(mcu::PinMode)1, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 11> >() build/main.o
+meta::tuple_generate_impl<Pin&, std::integer_sequence<unsigned int, __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7), __integer_pack(7)> >::type make_pins<(mcu::PinMode)1, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 11> >() build/main.o
 software_init_hook                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
-std::_Tuple_impl<0u, Pin, Pin, Pin, Pin, Pin, Pin, Pin>::_Tuple_impl<Pin&, Pin&, Pin&, Pin&, Pin&, Pin&, Pin&>(std::_Tuple_impl<0u, Pin&, Pin&, Pin&, Pin&, Pin&, Pin&, Pin&>&&) build/main.o
-std::_Tuple_impl<0u, Pin, Pin, Pin, Pin, Pin, Pin, Pin>::_Tuple_impl<Pin&, Pin&, Pin&, Pin&, Pin&, Pin&, Pin&>(std::_Tuple_impl<0u, Pin&, Pin&, Pin&, Pin&, Pin&, Pin&, Pin&>&&) build/main.o
 tickUpdater                                       build/main.o
-void std::_Tuple_impl<0u, Pin, Pin, Pin, Pin, Pin, Pin, Pin>::_M_assign<int, int, int, int, int, int, int>(std::_Tuple_impl<0u, int, int, int, int, int, int, int> const&) build/main.o
 vtable for ADC_average                            build/main.o
 vtable for Buzzer                                 build/main.o
-vtable for SSI<mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> > build/main.o
+vtable for SSI<mcu::Pin_<(mcu::Periph)3, 6>, mcu::Pin_<(mcu::Periph)3, 7>, mcu::Pin_<(mcu::Periph)4, 0>, mcu::Pin_<(mcu::Periph)4, 1>, mcu::Pin_<(mcu::Periph)4, 2>, mcu::Pin_<(mcu::Periph)4, 10>, mcu::Pin_<(mcu::Periph)4, 11>, mcu::Pin_<(mcu::Periph)4, 12>, mcu::Pin_<(mcu::Periph)4, 3>, mcu::Pin_<(mcu::Periph)3, 15>, mcu::Pin_<(mcu::Periph)4, 9>, mcu::Pin_<(mcu::Periph)4, 8>, mcu::Pin_<(mcu::Periph)4, 7>, mcu::Pin_<(mcu::Periph)4, 6> > build/main.o
 vtable for Timer                                  build/main.o
