@@ -58,7 +58,6 @@ int main()
       ssi.point[4]  = true;
       ssi.point[5]  = true;
 
-      __WFI();
    }
 
 }
